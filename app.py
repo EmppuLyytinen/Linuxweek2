@@ -108,9 +108,8 @@ def counter():
             }}
 
             .info {{
-                border-top: 1px solid #334155;
-                margin-top: 30px;
-                padding-top: 20px;
+                margin-top: 0px;
+                padding-top: 0px;
             }}
 
             a {{
@@ -155,35 +154,48 @@ def counter():
             <span class="tag">Gunicorn</span>
 
             <div class="info">
-                <div class="info-box">
-		<h2>How does it work?</h2>
+                <div class="info">
 
-                <p>
-                    Nginx receives the HTTP request and forwards
-                    it to the Flask application. Flask updates
-                    the counter stored in the MariaDB database.
-                </p>
-		</div>
-		<div class="info-box">
-                <h2>About this project</h2>
+    <div class="info-box">
+        <h2>How does it work?</h2>
+        <p>
+            Nginx receives the HTTP request and forwards
+            it to the Flask application. Flask updates
+            the counter stored in the MariaDB database.
+        </p>
+    </div>
 
-                <p>
-                    The application runs on an Ubuntu server.
-                    Gunicorn serves the Flask application,
-                    and systemd starts it automatically.
-                </p>
-		</div>
-                <p>
-                    <a href="/">Visit my Week 1 site :)</a>
-		<p>
-    			<a href="https://github.com/EmppuLyytinen/Linuxweek2">
-        		View my GitHub project
-    		</a>
-		</p>	
-                </p>
-            </div>
+    <div class="info-box">
+        <h2>About this project</h2>
+        <p>
+            The application runs on an Ubuntu server.
+            Gunicorn serves the Flask application,
+            and systemd starts it automatically.
+        </p>
+    </div>
 
-        </div>
+    <div class="info-box">
+        <h2>Database and persistence</h2>
+        <p>
+            The counter is stored in a MariaDB database
+            in the page_views table.
+            I tested it by rebooting the virtual machine.
+            The counter kept its value and continued counting.
+        </p>
+    </div>
+
+    <p>
+        <a href="/">Visit my Week 1 site :)</a>
+    </p>
+
+    <p>
+        <a href="https://github.com/EmppuLyytinen/Linuxweek2">
+            My GitHub project :)
+        </a>
+    </p>
+
+</div>
+
     </body>
     </html>
     """
