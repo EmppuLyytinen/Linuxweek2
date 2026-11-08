@@ -41,15 +41,150 @@ def counter():
 
     return f"""
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
-        <title>My Linux week2 project</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Linux Project - Week 2</title>
+
+        <style>
+            * {{
+                box-sizing: border-box;
+            }}
+
+            body {{
+                background: #101827;
+                color: #f8fafc;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 45px 20px;
+            }}
+
+            .container {{
+                max-width: 750px;
+                margin: auto;
+            }}
+
+            .subtitle {{
+                color: #60a5fa;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }}
+
+            h1 {{
+                font-size: 36px;
+                margin-bottom: 10px;
+            }}
+
+            p {{
+                color: #cbd5e1;
+		font-size: 18px;
+                line-height: 1.7;
+            }}
+
+            .counter {{
+                background: #1c2b44;
+                border: 1px solid #334155;
+                border-radius: 12px;
+                text-align: center;
+                padding: 35px;
+                margin: 30px 0;
+            }}
+
+            .number {{
+                color: #60a5fa;
+                font-size: 65px;
+                font-weight: bold;
+                margin: 10px;
+            }}
+
+            .tag {{
+                display: inline-block;
+                background: #283750;
+                padding: 9px 14px;
+                margin: 4px;
+                border-radius: 6px;
+                color: #e2e8f0;
+            }}
+
+            .info {{
+                border-top: 1px solid #334155;
+                margin-top: 30px;
+                padding-top: 20px;
+            }}
+
+            a {{
+                color: #60a5fa;
+            }}
+		.info-box {{
+    		background: #1c2b44;
+    		border: 1px solid #334155;
+    		border-radius: 12px;
+    		padding: 25px;
+    		margin: 20px 0;
+}}
+        </style>
     </head>
+
     <body>
-        <h1>My Linux Web App</h1>
-        <p>This page uses Python, Flask and MariaDB.</p>
-        <h2>Page loads: {views}</h2>
-        <p>Running on Ubuntu and Nginx soon! :D</p>
+        <div class="container">
+
+            <div class="subtitle">LINUX PROJECT / WEEK 02</div>
+
+            <h1>My Linux Web App :)</h1>
+
+            <p>
+                This is my second Linux server project.
+                The website uses Python, Flask and MariaDB
+                to keep track of the page loads.
+            </p>
+
+            <div class="counter">
+                <h2>Page Loads</h2>
+                <div class="number">{views}</div>
+                <p>Try to refresh the page to increase the counter!</p>
+            </div>
+
+            <h2>Technologies used</h2>
+
+            <span class="tag">Ubuntu</span>
+            <span class="tag">Nginx</span>
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">MariaDB</span>
+            <span class="tag">Gunicorn</span>
+
+            <div class="info">
+                <div class="info-box">
+		<h2>How does it work?</h2>
+
+                <p>
+                    Nginx receives the HTTP request and forwards
+                    it to the Flask application. Flask updates
+                    the counter stored in the MariaDB database.
+                </p>
+		</div>
+		<div class="info-box">
+                <h2>About this project</h2>
+
+                <p>
+                    The application runs on an Ubuntu server.
+                    Gunicorn serves the Flask application,
+                    and systemd starts it automatically.
+                </p>
+		</div>
+                <p>
+                    <a href="/">Visit my Week 1 site :)</a>
+		<p>
+    			<a href="https://github.com/EmppuLyytinen/Linuxweek2">
+        		View my GitHub project
+    		</a>
+		</p>	
+                </p>
+            </div>
+
+        </div>
     </body>
     </html>
     """
+
