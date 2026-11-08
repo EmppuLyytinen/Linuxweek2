@@ -154,8 +154,7 @@ def counter():
             <span class="tag">Gunicorn</span>
 
             <div class="info">
-                <div class="info">
-
+   
     <div class="info-box">
         <h2>How does it work?</h2>
         <p>
@@ -195,7 +194,7 @@ def counter():
     </p>
 
 </div>
-
+</div>
     </body>
     </html>
     """
